@@ -1,0 +1,17 @@
+{
+  "name": "altweb-test",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev-*\"",
+    "dev-backend": "npm --workspace backend run dev",
+    "dev-frontend": "npm --workspace frontend run dev",
+    "build": "npm -ws run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
